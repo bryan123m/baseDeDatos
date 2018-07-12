@@ -4,35 +4,13 @@
 	<title></title>
 </head>
 <body>
+	<section>
+		<div id="caja"></div>
+		<form action="post">
+			<input type="text" name="mensaje" id="mensaje">
+			<button>enviar</button>
+<script src="jquery-3.3.1.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDhTqG9TSBB6xJTEq35gj3PST7Y4xrFQgU",
-    authDomain: "chat-2d6e1.firebaseapp.com",
-    databaseURL: "https://chat-2d6e1.firebaseio.com",
-    projectId: "chat-2d6e1",
-    storageBucket: "",
-    messagingSenderId: "627360866822"
-  };
-  firebase.initializeApp(config);
-
-  const database = firebase.database();
-  
-  const mensajes = database.ref('mensajes');
-
-  mensajes.push (
-  {
-  	mensaje:"hola mundo cruel",
-  	privado:true,
-  	leido:false
-  }, function(error) {
-  	if(error) {
-  		console.log(error);
-  	}else {
-  		console.log('mensaje enviado');
-  	}
-  });
-</script>
+<script src="main.js"></script>
 </body>
 </html>
